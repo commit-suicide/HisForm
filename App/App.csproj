@@ -106,11 +106,47 @@
     <Compile Include="Common\ConvertSpell.cs" />
     <Compile Include="Common\StringHelper.cs" />
     <Compile Include="Dictionary\ClsMenu.cs" />
+    <Compile Include="Dictionary\FrmAntibiosisLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmAntibiosisLevel.Designer.cs">
+      <DependentUpon>FrmAntibiosisLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmAntibiosisLevelEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmAntibiosisLevelEdit.Designer.cs">
+      <DependentUpon>FrmAntibiosisLevelEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmAssayTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmAssayTemplate.Designer.cs">
+      <DependentUpon>FrmAssayTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmAssayTemplateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmAssayTemplateEdit.Designer.cs">
+      <DependentUpon>FrmAssayTemplateEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dictionary\FrmCity.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dictionary\FrmCity.Designer.cs">
       <DependentUpon>FrmCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmConformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmConformation.Designer.cs">
+      <DependentUpon>FrmConformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmConformationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmConformationEdit.Designer.cs">
+      <DependentUpon>FrmConformationEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Dictionary\FrmCure.cs">
       <SubType>Form</SubType>
@@ -124,6 +160,54 @@
     <Compile Include="Dictionary\FrmCureEdit.Designer.cs">
       <DependentUpon>FrmCureEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dictionary\FrmCureTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmCureTemplate.Designer.cs">
+      <DependentUpon>FrmCureTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmCureTemplateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmCureTemplateEdit.Designer.cs">
+      <DependentUpon>FrmCureTemplateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDevice.Designer.cs">
+      <DependentUpon>FrmDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDeviceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDeviceEdit.Designer.cs">
+      <DependentUpon>FrmDeviceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDoctorLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDoctorLevel.Designer.cs">
+      <DependentUpon>FrmDoctorLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDoctorLevelEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDoctorLevelEdit.Designer.cs">
+      <DependentUpon>FrmDoctorLevelEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugHouse.Designer.cs">
+      <DependentUpon>FrmDrugHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugHouseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugHouseEdit.Designer.cs">
+      <DependentUpon>FrmDrugHouseEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dictionary\FrmDrugStore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +219,72 @@
     </Compile>
     <Compile Include="Dictionary\FrmDrugStoreEdit.Designer.cs">
       <DependentUpon>FrmDrugStoreEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugType.Designer.cs">
+      <DependentUpon>FrmDrugType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmDrugTypeEdit.Designer.cs">
+      <DependentUpon>FrmDrugTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmExaminePack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmExaminePack.Designer.cs">
+      <DependentUpon>FrmExaminePack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmExaminePackEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmExaminePackEdit.Designer.cs">
+      <DependentUpon>FrmExaminePackEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmExaminePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmExaminePrice.Designer.cs">
+      <DependentUpon>FrmExaminePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmExamineTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmExamineTemplate.Designer.cs">
+      <DependentUpon>FrmExamineTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmExamineTemplateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmExamineTemplateEdit.Designer.cs">
+      <DependentUpon>FrmExamineTemplateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmFactory.Designer.cs">
+      <DependentUpon>FrmFactory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmFactoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmFactoryEdit.Designer.cs">
+      <DependentUpon>FrmFactoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmFinanceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmFinanceType.Designer.cs">
+      <DependentUpon>FrmFinanceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmFinanceTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmFinanceTypeEdit.Designer.cs">
+      <DependentUpon>FrmFinanceTypeEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Dictionary\FrmFixed.cs">
       <SubType>Form</SubType>
@@ -148,17 +298,53 @@
     <Compile Include="Dictionary\FrmFixedEdit.Designer.cs">
       <DependentUpon>FrmFixedEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dictionary\FrmPart.cs">
+    <Compile Include="Dictionary\FrmInvoiceType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dictionary\FrmPart.Designer.cs">
-      <DependentUpon>FrmPart.cs</DependentUpon>
+    <Compile Include="Dictionary\FrmInvoiceType.Designer.cs">
+      <DependentUpon>FrmInvoiceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmInvoiceTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmInvoiceTypeEdit.Designer.cs">
+      <DependentUpon>FrmInvoiceTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmPack.Designer.cs">
+      <DependentUpon>FrmPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmPackEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmPackEdit.Designer.cs">
+      <DependentUpon>FrmPackEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\Frmpart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Frmpart.Designer.cs">
+      <DependentUpon>Frmpart.cs</DependentUpon>
     </Compile>
     <Compile Include="Dictionary\FrmPartEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dictionary\FrmPartEdit.Designer.cs">
       <DependentUpon>FrmPartEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmPayType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmPayType.Designer.cs">
+      <DependentUpon>FrmPayType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmPayTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmPayTypeEdit.Designer.cs">
+      <DependentUpon>FrmPayTypeEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Dictionary\FrmSample.cs">
       <SubType>Form</SubType>
@@ -171,6 +357,78 @@
     </Compile>
     <Compile Include="Dictionary\FrmSampleEdit.Designer.cs">
       <DependentUpon>FrmSampleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmSick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmSick.Designer.cs">
+      <DependentUpon>FrmSick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmSickEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmSickEdit.Designer.cs">
+      <DependentUpon>FrmSickEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmSubject.Designer.cs">
+      <DependentUpon>FrmSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmSubjectEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmSubjectEdit.Designer.cs">
+      <DependentUpon>FrmSubjectEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmSupplier.Designer.cs">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmSupplierEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmSupplierEdit.Designer.cs">
+      <DependentUpon>FrmSupplierEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmToxic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmToxic.Designer.cs">
+      <DependentUpon>FrmToxic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmToxicEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmToxicEdit.Designer.cs">
+      <DependentUpon>FrmToxicEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmUnit.Designer.cs">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmUnitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmUnitEdit.Designer.cs">
+      <DependentUpon>FrmUnitEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmUsage.Designer.cs">
+      <DependentUpon>FrmUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\FrmUsageEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary\FrmUsageEdit.Designer.cs">
+      <DependentUpon>FrmUsageEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Examine\FrmExamine.cs">
       <SubType>Form</SubType>
@@ -469,8 +727,26 @@
     <EmbeddedResource Include="Common\ComboboxProvinceCityCounty.resx">
       <DependentUpon>ComboboxProvinceCityCounty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmAntibiosisLevel.resx">
+      <DependentUpon>FrmAntibiosisLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmAntibiosisLevelEdit.resx">
+      <DependentUpon>FrmAntibiosisLevelEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmAssayTemplate.resx">
+      <DependentUpon>FrmAssayTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmAssayTemplateEdit.resx">
+      <DependentUpon>FrmAssayTemplateEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmCity.resx">
       <DependentUpon>FrmCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmConformation.resx">
+      <DependentUpon>FrmConformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmConformationEdit.resx">
+      <DependentUpon>FrmConformationEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmCure.resx">
       <DependentUpon>FrmCure.cs</DependentUpon>
@@ -478,11 +754,68 @@
     <EmbeddedResource Include="Dictionary\FrmCureEdit.resx">
       <DependentUpon>FrmCureEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmCureTemplate.resx">
+      <DependentUpon>FrmCureTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmCureTemplateEdit.resx">
+      <DependentUpon>FrmCureTemplateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDevice.resx">
+      <DependentUpon>FrmDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDeviceEdit.resx">
+      <DependentUpon>FrmDeviceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDoctorLevel.resx">
+      <DependentUpon>FrmDoctorLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDoctorLevelEdit.resx">
+      <DependentUpon>FrmDoctorLevelEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDrugHouse.resx">
+      <DependentUpon>FrmDrugHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDrugHouseEdit.resx">
+      <DependentUpon>FrmDrugHouseEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmDrugStore.resx">
       <DependentUpon>FrmDrugStore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmDrugStoreEdit.resx">
       <DependentUpon>FrmDrugStoreEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDrugType.resx">
+      <DependentUpon>FrmDrugType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmDrugTypeEdit.resx">
+      <DependentUpon>FrmDrugTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmExaminePack.resx">
+      <DependentUpon>FrmExaminePack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmExaminePackEdit.resx">
+      <DependentUpon>FrmExaminePackEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmExaminePrice.resx">
+      <DependentUpon>FrmExaminePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmExamineTemplate.resx">
+      <DependentUpon>FrmExamineTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmExamineTemplateEdit.resx">
+      <DependentUpon>FrmExamineTemplateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmFactory.resx">
+      <DependentUpon>FrmFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmFactoryEdit.resx">
+      <DependentUpon>FrmFactoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmFinanceType.resx">
+      <DependentUpon>FrmFinanceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmFinanceTypeEdit.resx">
+      <DependentUpon>FrmFinanceTypeEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmFixed.resx">
       <DependentUpon>FrmFixed.cs</DependentUpon>
@@ -490,17 +823,71 @@
     <EmbeddedResource Include="Dictionary\FrmFixedEdit.resx">
       <DependentUpon>FrmFixedEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dictionary\FrmPart.resx">
-      <DependentUpon>FrmPart.cs</DependentUpon>
+    <EmbeddedResource Include="Dictionary\FrmInvoiceType.resx">
+      <DependentUpon>FrmInvoiceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmInvoiceTypeEdit.resx">
+      <DependentUpon>FrmInvoiceTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmPack.resx">
+      <DependentUpon>FrmPack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmPackEdit.resx">
+      <DependentUpon>FrmPackEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\Frmpart.resx">
+      <DependentUpon>Frmpart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmPartEdit.resx">
       <DependentUpon>FrmPartEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmPayType.resx">
+      <DependentUpon>FrmPayType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmPayTypeEdit.resx">
+      <DependentUpon>FrmPayTypeEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmSample.resx">
       <DependentUpon>FrmSample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dictionary\FrmSampleEdit.resx">
       <DependentUpon>FrmSampleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmSick.resx">
+      <DependentUpon>FrmSick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmSickEdit.resx">
+      <DependentUpon>FrmSickEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmSubject.resx">
+      <DependentUpon>FrmSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmSubjectEdit.resx">
+      <DependentUpon>FrmSubjectEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmSupplier.resx">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmSupplierEdit.resx">
+      <DependentUpon>FrmSupplierEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmToxic.resx">
+      <DependentUpon>FrmToxic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmToxicEdit.resx">
+      <DependentUpon>FrmToxicEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmUnit.resx">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmUnitEdit.resx">
+      <DependentUpon>FrmUnitEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmUsage.resx">
+      <DependentUpon>FrmUsage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary\FrmUsageEdit.resx">
+      <DependentUpon>FrmUsageEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Examine\FrmExamine.resx">
       <DependentUpon>FrmExamine.cs</DependentUpon>
