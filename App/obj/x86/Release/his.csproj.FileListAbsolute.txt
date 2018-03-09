@@ -1,0 +1,13 @@
+H:\his\his\bin\x86\Release\his.exe
+H:\his\his\bin\x86\Release\his.pdb
+H:\his\his\obj\x86\Release\his.Base.FrmDepartment.resources
+H:\his\his\obj\x86\Release\his.Base.FrmDepartmentEdit.resources
+H:\his\his\obj\x86\Release\his.Base.FrmWorker.resources
+H:\his\his\obj\x86\Release\his.Base.FrmWorkerEdit.resources
+H:\his\his\obj\x86\Release\his.FrmMain.resources
+H:\his\his\obj\x86\Release\his.FrmLogin.resources
+H:\his\his\obj\x86\Release\his.Properties.Resources.resources
+H:\his\his\obj\x86\Release\his.csproj.GenerateResource.Cache
+H:\his\his\obj\x86\Release\his.csproj.CoreCompileInputs.cache
+H:\his\his\obj\x86\Release\his.exe
+H:\his\his\obj\x86\Release\his.pdb
