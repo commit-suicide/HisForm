@@ -1,6 +1,6 @@
 ﻿namespace App.Dictionary
 {
-    partial class FrmChargeTypeEdit
+    partial class FrmSubjectEdit
     {
         /// <summary>
         /// Required designer variable.
