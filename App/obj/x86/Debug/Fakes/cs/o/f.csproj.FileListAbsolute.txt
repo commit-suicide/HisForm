@@ -1,0 +1,11 @@
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\b\CSkin.16.1.14.2.Fakes.xml
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\b\CSkin.16.1.14.2.Fakes.dll
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\b\CSkin.16.1.14.2.Fakes.pdb
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\b\Accessibility.dll
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\b\CSkin.dll
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\b\Microsoft.QualityTools.Testing.Fakes.dll
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\b\Newtonsoft.Json.dll
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\o\f.csprojResolveAssemblyReference.cache
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\o\f.csproj.CoreCompileInputs.cache
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\o\CSkin.16.1.14.2.Fakes.dll
+E:\vs\his_top\HisForm\App\obj\x86\Debug\Fakes\cs\o\CSkin.16.1.14.2.Fakes.pdb

@@ -34,21 +34,19 @@ namespace App {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new App.Dictionary.FrmPart());
-            //Application.Run(new App.Dictionary.FrmUnit());
-            //Application.Run(new App.Dictionary.FrmSample());
-            Application.Run(new App.Dictionary.FrmCureEdit());
+			Application.Run(new App.DrugHouse.FrmDrugSellRefundSearch());
 
-<<<<<<< .mine
-            //Application.Run(new App.FrmLogin());
-            //Application.Run(new App.FrmMain());
-||||||| .r34
-			//Application.Run(new App.FrmLogin());
-			Application.Run(new App.FrmMain());
-=======
+			//Application.Run(new App.Dictionary.FrmPart());
+			//Application.Run(new App.Dictionary.FrmUnit());
+			//Application.Run(new App.Dictionary.FrmSample());
+			//Application.Run(new App.Dictionary.FrmCureEdit());
+
 			//Application.Run(new App.FrmLogin());
 			//Application.Run(new App.FrmMain());
->>>>>>> .r35
+			//Application.Run(new App.FrmLogin());
+			//Application.Run(new App.FrmMain());
+			//Application.Run(new App.FrmLogin());
+			//Application.Run(new App.FrmMain());
 			//Application.Run(new FrmPassword());
 
 			//Application.Run(new FrmHospital());
@@ -96,7 +94,7 @@ namespace App {
 			//Application.Run(new FrmCard());
 			//Application.Run(new FrmCardEdit(1));
 
-			Application.Run(new FrmCity());
+			//Application.Run(new FrmCity());
 		}
 		//****************************************************************************************************
 	}
