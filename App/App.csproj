@@ -79,7 +79,13 @@
     <Reference Include="CSkin">
       <HintPath>..\..\第三方插件\CSkin 16.1.14.2\CSkin 2.0\CSkin.dll</HintPath>
     </Reference>
+    <Reference Include="CSkin.16.1.14.2.Fakes">
+      <HintPath>FakesAssemblies\CSkin.16.1.14.2.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>bin\x86\Debug\dll\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -453,6 +459,186 @@
     </Compile>
     <Compile Include="Dictionary\FrmUsageEdit.Designer.cs">
       <DependentUpon>FrmUsageEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugAllocate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugAllocate.Designer.cs">
+      <DependentUpon>FrmDrugAllocate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugAllocateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugAllocateEdit.Designer.cs">
+      <DependentUpon>FrmDrugAllocateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLoss.Designer.cs">
+      <DependentUpon>FrmDrugLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLossEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLossEdit.Designer.cs">
+      <DependentUpon>FrmDrugLossEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLossPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLossPass.Designer.cs">
+      <DependentUpon>FrmDrugLossPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLossPassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugLossPassEdit.Designer.cs">
+      <DependentUpon>FrmDrugLossPassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugRefund.Designer.cs">
+      <DependentUpon>FrmDrugRefund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugRefundEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugRefundEdit.Designer.cs">
+      <DependentUpon>FrmDrugRefundEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSell.Designer.cs">
+      <DependentUpon>FrmDrugSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSellEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSellEdit.Designer.cs">
+      <DependentUpon>FrmDrugSellEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSellRefundSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSellRefundSearch.Designer.cs">
+      <DependentUpon>FrmDrugSellRefundSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSellRefundSearchEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSellRefundSearchEdit.Designer.cs">
+      <DependentUpon>FrmDrugSellRefundSearchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpill.Designer.cs">
+      <DependentUpon>FrmDrugSpill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpillEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpillEdit.Designer.cs">
+      <DependentUpon>FrmDrugSpillEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpillPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpillPass.Designer.cs">
+      <DependentUpon>FrmDrugSpillPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpillPassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugHouse\FrmDrugSpillPassEdit.Designer.cs">
+      <DependentUpon>FrmDrugSpillPassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugAllocatePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugAllocatePass.Designer.cs">
+      <DependentUpon>FrmDrugAllocatePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugAllocatePassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugAllocatePassEdit.Designer.cs">
+      <DependentUpon>FrmDrugAllocatePassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugIn.Designer.cs">
+      <DependentUpon>FrmDrugIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugInEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugInEdit.Designer.cs">
+      <DependentUpon>FrmDrugInEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugInPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugInPass.Designer.cs">
+      <DependentUpon>FrmDrugInPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugInPassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugInPassEdit.Designer.cs">
+      <DependentUpon>FrmDrugInPassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLoss.Designer.cs">
+      <DependentUpon>FrmDrugLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLossEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLossEdit.Designer.cs">
+      <DependentUpon>FrmDrugLossEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLossPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLossPass.Designer.cs">
+      <DependentUpon>FrmDrugLossPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLossPassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugLossPassEdit.Designer.cs">
+      <DependentUpon>FrmDrugLossPassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpill.Designer.cs">
+      <DependentUpon>FrmDrugSpill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpillEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpillEdit.Designer.cs">
+      <DependentUpon>FrmDrugSpillEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpillPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpillPass.Designer.cs">
+      <DependentUpon>FrmDrugSpillPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpillPassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugStore\FrmDrugSpillPassEdit.Designer.cs">
+      <DependentUpon>FrmDrugSpillPassEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Examine\FrmExamine.cs">
       <SubType>Form</SubType>
@@ -925,6 +1111,96 @@
     <EmbeddedResource Include="Dictionary\FrmUsageEdit.resx">
       <DependentUpon>FrmUsageEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugAllocate.resx">
+      <DependentUpon>FrmDrugAllocate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugAllocateEdit.resx">
+      <DependentUpon>FrmDrugAllocateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugLoss.resx">
+      <DependentUpon>FrmDrugLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugLossEdit.resx">
+      <DependentUpon>FrmDrugLossEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugLossPass.resx">
+      <DependentUpon>FrmDrugLossPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugLossPassEdit.resx">
+      <DependentUpon>FrmDrugLossPassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugRefund.resx">
+      <DependentUpon>FrmDrugRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugRefundEdit.resx">
+      <DependentUpon>FrmDrugRefundEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSell.resx">
+      <DependentUpon>FrmDrugSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSellEdit.resx">
+      <DependentUpon>FrmDrugSellEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSellRefundSearch.resx">
+      <DependentUpon>FrmDrugSellRefundSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSellRefundSearchEdit.resx">
+      <DependentUpon>FrmDrugSellRefundSearchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSpill.resx">
+      <DependentUpon>FrmDrugSpill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSpillEdit.resx">
+      <DependentUpon>FrmDrugSpillEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSpillPass.resx">
+      <DependentUpon>FrmDrugSpillPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugHouse\FrmDrugSpillPassEdit.resx">
+      <DependentUpon>FrmDrugSpillPassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugAllocatePass.resx">
+      <DependentUpon>FrmDrugAllocatePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugAllocatePassEdit.resx">
+      <DependentUpon>FrmDrugAllocatePassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugIn.resx">
+      <DependentUpon>FrmDrugIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugInEdit.resx">
+      <DependentUpon>FrmDrugInEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugInPass.resx">
+      <DependentUpon>FrmDrugInPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugInPassEdit.resx">
+      <DependentUpon>FrmDrugInPassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugLoss.resx">
+      <DependentUpon>FrmDrugLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugLossEdit.resx">
+      <DependentUpon>FrmDrugLossEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugLossPass.resx">
+      <DependentUpon>FrmDrugLossPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugLossPassEdit.resx">
+      <DependentUpon>FrmDrugLossPassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugSpill.resx">
+      <DependentUpon>FrmDrugSpill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugSpillEdit.resx">
+      <DependentUpon>FrmDrugSpillEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugSpillPass.resx">
+      <DependentUpon>FrmDrugSpillPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugStore\FrmDrugSpillPassEdit.resx">
+      <DependentUpon>FrmDrugSpillPassEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Examine\FrmExamine.resx">
       <DependentUpon>FrmExamine.cs</DependentUpon>
     </EmbeddedResource>
@@ -1063,6 +1339,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <Fakes Include="Fakes\CSkin.fakes" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1080,8 +1357,12 @@
     <Folder Include="Assay\" />
     <Folder Include="Cashier\" />
     <Folder Include="Clinic\" />
+<<<<<<< HEAD
     <Folder Include="DrugHouse\" />
     <Folder Include="DrugStore\" />
+=======
+    <Folder Include="Cure\" />
+>>>>>>> Cure2
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
