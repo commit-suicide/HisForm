@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace App.Dictionary
 {
-    public partial class FrmSubjectEdit : CCSkinMain
+    public partial class FrmChargeTypeEdit : CCSkinMain
     {
-        public FrmSubjectEdit()
+        public FrmChargeTypeEdit()
         {
             InitializeComponent();
         }
