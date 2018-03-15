@@ -34,7 +34,10 @@ namespace App {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-			Application.Run(new App.DrugHouse.FrmDrugSellRefundSearch());
+
+            //Application.Run(new FrmCure());
+			//Application.Run(new App.DrugHouse.FrmDrugSellRefundSearch());
+
 
 			//Application.Run(new App.Dictionary.FrmPart());
 			//Application.Run(new App.Dictionary.FrmUnit());
