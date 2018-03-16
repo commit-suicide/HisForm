@@ -1,23 +1,31 @@
 ﻿using App.Dictionary;
 using App.Guidance;
 using System;
+using System.Data.OleDb;
+using System.Data.OracleClient;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Xml;
 
 namespace App {
 	static class Program {
-		public static SqlConnection conn = new SqlConnection();
+		public static OleDbConnection oleConn = new OleDbConnection();
+		public static SqlConnection mssqlConn = new SqlConnection();
+		public static OracleConnection oracleConn = new OracleConnection();
+		//public static MysqlConnector mysqlconn = new MysqlConnector();
+
+		public static string strAppName;
+		public static string strDbType, strDbHost, strDbProt, strDbPath, strDbName, strDbUsername, strDbPassword, strDbPrefix;
+
 		public static int intWorkerId = 0;
 		public static int intHospitalId = 0;
 		public static int intWorkerDepartmentId = 0;
 
-		public static string strAppTitle = "";
 		public static string strHospitalName = "";
 		public static string strDepartmentName = "";
 		public static string strUsername = "";
 		public static string strRealname = "";
-		
+
 		public static XmlDocument xmlApp = new XmlDocument();
 
 		//****************************************************************************************************
@@ -29,27 +37,30 @@ namespace App {
 			string strXmlPath = "app.config";
 			xmlApp.Load(strXmlPath);
 
-			strAppTitle = xmlApp.SelectSingleNode("/config/system/title").InnerText;
+			strAppName = xmlApp.SelectSingleNode("/config/system/appName").InnerText;
+
+			strDbType = xmlApp.SelectSingleNode("/config/database/dbType").InnerText;
+			strDbHost = xmlApp.SelectSingleNode("/config/database/dbHost").InnerText;
+			strDbProt = xmlApp.SelectSingleNode("/config/database/dbProt").InnerText;
+			strDbPath = xmlApp.SelectSingleNode("/config/database/dbPath").InnerText;
+			strDbName = xmlApp.SelectSingleNode("/config/database/dbName").InnerText;
+			strDbUsername = xmlApp.SelectSingleNode("/config/database/dbUsername").InnerText;
+			strDbPassword = xmlApp.SelectSingleNode("/config/database/dbPassword").InnerText;
+			strDbPrefix = xmlApp.SelectSingleNode("/config/database/dbPrefix").InnerText;
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
+			//Application.Run(new App.FrmLogin());
+			Application.Run(new App.FrmMain());
 
-            //Application.Run(new FrmCure());
 			//Application.Run(new App.DrugHouse.FrmDrugSellRefundSearch());
-
 
 			//Application.Run(new App.Dictionary.FrmPart());
 			//Application.Run(new App.Dictionary.FrmUnit());
 			//Application.Run(new App.Dictionary.FrmSample());
 			//Application.Run(new App.Dictionary.FrmCureEdit());
 
-			//Application.Run(new App.FrmLogin());
-			//Application.Run(new App.FrmMain());
-			//Application.Run(new App.FrmLogin());
-			//Application.Run(new App.FrmMain());
-			//Application.Run(new App.FrmLogin());
-			//Application.Run(new App.FrmMain());
 			//Application.Run(new FrmPassword());
 
 			//Application.Run(new FrmHospital());

@@ -24,7 +24,7 @@ namespace App.Dictionary
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            FrmToxicEdit frm = FrmToxicEdit();
+            FrmToxicEdit frm = new FrmToxicEdit();
             frm.ShowDialog();
         }
 

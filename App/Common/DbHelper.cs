@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Data;
+using System.Data.OracleClient;
 using System.Data.SqlClient;
 using System.Reflection;
 
@@ -10,7 +11,6 @@ namespace App.Common {
 		private bool bolRelation = false;
 
 		protected int intNumber = 100;
-		protected string strPrefix = "";
 		protected string strTable = "";
 		protected string strFindField = "";
 		protected string strSelectField = "";
@@ -19,50 +19,79 @@ namespace App.Common {
 		protected ArrayList arrRelation = new ArrayList();
 		//****************************************************************************************************
 		public DbHelper() {
-			strPrefix = Program.xmlApp.SelectSingleNode("/config/database/prefix").InnerText;
-			
-			openConn();
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					openMssqlConn();
+
+					break;
+				case "oracle":
+					openOracleConn();
+
+					break;
+				case "mysql":
+
+					break;
+			}
 		}
 		//****************************************************************************************************
 		//打开数据库
-		private SqlConnection openConn() {
-			if (Program.conn.State == ConnectionState.Closed) {
-				string strHost = Program.xmlApp.SelectSingleNode("/config/database/host").InnerText;
-				string strDatabase = Program.xmlApp.SelectSingleNode("/config/database/database").InnerText;
-				string strUsername = Program.xmlApp.SelectSingleNode("/config/database/username").InnerText;
-				string strPassword = Program.xmlApp.SelectSingleNode("/config/database/password").InnerText;
+		private SqlConnection openMssqlConn() {
+			if (Program.mssqlConn.State == ConnectionState.Closed) {
+				string strConn = "Data Source=" + Program.strDbHost + "; Initial Catalog=" + Program.strDbName + "; User ID=" + Program.strDbUsername + "; Password=" + Program.strDbPassword + ";";
+				SqlConnection mssqlConn = new SqlConnection(strConn);
+				Program.mssqlConn = mssqlConn;
 
-				string strConn = "Data Source=" + strHost + "; Initial Catalog=" + strDatabase + "; User ID=" + strUsername + "; Password=" + strPassword + ";";
-				SqlConnection sqlConnection = new SqlConnection(strConn);
-
-				Program.conn = sqlConnection;
-				Program.conn.Open();
+				try {
+					Program.mssqlConn.Open();
+				} catch (Exception ex) {
+					Console.WriteLine(ex.Message.ToString());
+				} finally {
+					Program.mssqlConn.Close();
+				}
 			}
-			
-			return (Program.conn);
 
-			//string connString = "User ID=cityhos; Password=hiscss; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.2.12)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=oracle)));";
-			//OracleConnection conn = new OracleConnection(connString);
-			//try {
-			//    conn.Open();
-			//} catch (Exception ex) {
-			//    //MessageBox.Show(ex.Message.ToString());
-			//} finally {
-			//    conn.Close();
-			//}
+			return (Program.mssqlConn);
+		}
+		//****************************************************************************************************
+		private OracleConnection openOracleConn() {
+			if (Program.oracleConn.State == ConnectionState.Closed) {
+				string connString = "User ID=" + Program.strDbUsername + "; Password=" + Program.strDbPassword + "; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=" + Program.strDbHost + ")(PORT=" + Program.strDbProt + ")))(CONNECT_DATA=(SERVICE_NAME=" + Program.strDbName + ")));";
+				OracleConnection oracleConn = new OracleConnection(connString);
+				Program.oracleConn = oracleConn;
 
-			////string sql = "select * from CLINICBILLDETAIL";
-			//string sql = "select * from AAAA";
-			//OracleDataAdapter oracleDataAdapter = new OracleDataAdapter(sql, conn);
-			//DataSet ds = new DataSet();
-			//oracleDataAdapter.Fill(ds);
+				try {
+					Program.oracleConn.Open();
+				} catch (Exception ex) {
+					Console.WriteLine(ex.Message.ToString());
+				} finally {
+					Program.oracleConn.Close();
+				}
+			}
 
-			//dataGridView1.DataSource = ds.Tables[0];
+			return (Program.oracleConn);
 		}
 		//****************************************************************************************************
 		//关闭数据库
 		public void closeConn() {
-			Program.conn.Close();
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					Program.mssqlConn.Close();
+
+					break;
+				case "oracle":
+					Program.oracleConn.Close();
+
+					break;
+				case "mysql":
+
+					break;
+			}
 		}
 		//****************************************************************************************************
 		//设置 查询字段
@@ -118,18 +147,56 @@ namespace App.Common {
 		//****************************************************************************************************
 		//删除
 		public int setDelete(int intId) {
-			string strSql = "delete from " + strPrefix + strTable + " where id = " + intId.ToString();
-			SqlCommand cmd = new SqlCommand(strSql, Program.conn);
-			int n = cmd.ExecuteNonQuery();
+			int n = 0;
+
+			string strSql = "delete from " + Program.strDbPrefix + strTable + " where id = " + intId.ToString();
+
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					SqlCommand mssqlCommand = new SqlCommand(strSql, Program.mssqlConn);
+					n = mssqlCommand.ExecuteNonQuery();
+
+					break;
+				case "oracle":
+					OracleCommand oracleCommand = new OracleCommand(strSql, Program.oracleConn);
+					n = oracleCommand.ExecuteNonQuery();
+
+					break;
+				case "mysql":
+
+					break;
+			}
 
 			return (n);
 		}
 		//****************************************************************************************************
 		//查询多笔记录
 		public DataTable getSelect() {
-			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(parseSelectSql("select"), Program.conn);
 			DataSet ds = new DataSet();
-			sqlDataAdapter.Fill(ds);
+
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(parseSelectSql("select"), Program.mssqlConn);
+					sqlDataAdapter.Fill(ds);
+
+					break;
+				case "oracle":
+					Console.WriteLine(parseSelectSql("select"));
+
+					OracleDataAdapter oracleDataAdapter = new OracleDataAdapter(parseSelectSql("select"), Program.oracleConn);
+					oracleDataAdapter.Fill(ds);
+
+					break;
+				case "mysql":
+
+					break;
+			}
 
 			if (ds.Tables[0].Rows.Count == 0) {
 				return (null);
@@ -144,9 +211,26 @@ namespace App.Common {
 				setWhere("id = " + intId.ToString());
 			}
 
-			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(parseSelectSql("find"), Program.conn);
 			DataSet ds = new DataSet();
-			sqlDataAdapter.Fill(ds);
+
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(parseSelectSql("find"), Program.mssqlConn);
+					sqlDataAdapter.Fill(ds);
+
+					break;
+				case "oracle":
+					OracleDataAdapter oracleDataAdapter = new OracleDataAdapter(parseSelectSql("find"), Program.oracleConn);
+					oracleDataAdapter.Fill(ds);
+
+					break;
+				case "mysql":
+
+					break;
+			}
 
 			if (ds.Tables[0].Rows.Count == 0) {
 				return (null);
@@ -160,7 +244,7 @@ namespace App.Common {
 			int n = 0;
 			string strSql = "";
 
-			strTable = strPrefix + strTable;
+			strTable = Program.strDbPrefix + strTable;
 
 			if (Convert.ToInt32(ht["id"]) == 0) {
 				strSql = "insert into " + strTable + " (";
@@ -208,17 +292,52 @@ namespace App.Common {
 				strSql += " where id = " + ht["id"].ToString();
 			}
 
-			SqlCommand sqlCommand = new SqlCommand(strSql, Program.conn);
-			int intRows = sqlCommand.ExecuteNonQuery();
+			int intRows = 0;
+
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					SqlCommand sqlCommand = new SqlCommand(strSql, Program.mssqlConn);
+					intRows = sqlCommand.ExecuteNonQuery();
+
+					break;
+				case "oracle":
+					OracleCommand oracleCommand = new OracleCommand(strSql, Program.oracleConn);
+					intRows = oracleCommand.ExecuteNonQuery();
+
+					break;
+				case "mysql":
+
+					break;
+			}
 
 			return (intRows);
 		}
 		//****************************************************************************************************
 		//查找字段
 		public string getField(string strField) {
-			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(parseSelectSql("find"), Program.conn);
 			DataSet ds = new DataSet();
-			sqlDataAdapter.Fill(ds);
+
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(parseSelectSql("find"), Program.mssqlConn);
+					sqlDataAdapter.Fill(ds);
+
+					break;
+				case "oracle":
+					OracleDataAdapter oracleDataAdapter = new OracleDataAdapter(parseSelectSql("find"), Program.oracleConn);
+					oracleDataAdapter.Fill(ds);
+
+					break;
+				case "mysql":
+
+					break;
+			}
 
 			if (ds.Tables[0].Rows.Count == 0) {
 				return ("");
@@ -254,9 +373,26 @@ namespace App.Common {
 		//****************************************************************************************************
 		//执行 sql 语句
 		public int getQuery(string strSql) {
-			SqlCommand cmd = new SqlCommand(strSql, Program.conn);
-			
-			int n = cmd.ExecuteNonQuery();
+			int n = 0;
+
+			switch (Program.strDbType) {
+				case "access":
+
+					break;
+				case "mssql":
+					SqlCommand sqlCommand = new SqlCommand(strSql, Program.mssqlConn);
+					n = sqlCommand.ExecuteNonQuery();
+
+					break;
+				case "oracle":
+					OracleCommand oracleCommand = new OracleCommand(strSql, Program.oracleConn);
+					n = oracleCommand.ExecuteNonQuery();
+
+					break;
+				case "mysql":
+
+					break;
+			}
 
 			return (n);
 		}
@@ -292,19 +428,19 @@ namespace App.Common {
 		}
 		//****************************************************************************************************
 		private string parseTable() {
-			string str = " from " + this.strPrefix + this.strTable;
+			string str = " from " + Program.strDbPrefix + this.strTable;
 
 			if (bolRelation) {
 				foreach (string[] arrModel in this.arrRelation) {
 					Assembly assm = Assembly.GetAssembly(this.GetType());
 					DbHelper db = (DbHelper)assm.CreateInstance("App.Model." + arrModel[0]);
-				
-					string strModelTable = this.strPrefix + db.strTable;
 
-					str += " inner join " + strModelTable + " on " + this.strPrefix + this.strTable + "." + arrModel[1] + " = " + strModelTable + ".id";
+					string strModelTable = Program.strDbPrefix + db.strTable;
+
+					str += " inner join " + strModelTable + " on " + Program.strDbPrefix + this.strTable + "." + arrModel[1] + " = " + strModelTable + ".id";
 				}
 			}
-			
+
 			return (str);
 		}
 		//****************************************************************************************************
@@ -313,7 +449,7 @@ namespace App.Common {
 
 			if (strWhere.Trim() != "") {
 				if (bolRelation) {
-					str = " where " + strPrefix + strTable + "." + strWhere;
+					str = " where " + Program.strDbPrefix + strTable + "." + strWhere;
 				} else {
 					str = " where " + strWhere;
 				}
@@ -326,7 +462,7 @@ namespace App.Common {
 			string str = " order by ";
 
 			if (bolRelation) {
-				str += this.strPrefix + this.strTable + "." + strOrder;
+				str += Program.strDbPrefix + this.strTable + "." + strOrder;
 			} else {
 				str += strOrder;
 			}

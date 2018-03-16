@@ -18,7 +18,7 @@ namespace App {
 		//****************************************************************************************************
 		//加载
 		private void FrmMain_Load(object sender, EventArgs e) {
-			this.Text = Program.strAppTitle + this.Text;
+			this.Text = Program.strAppName + this.Text;
 
 			//任务栏
 			tspInfo.Text = Program.strRealname + "-" + Program.strRealname + "-" + Program.strRealname;
@@ -74,7 +74,7 @@ namespace App {
 
 					tab.TabPages.Add(strMenuName);
 					tab.SelectTab(intIndex);
-					
+
 					frm.Dock = DockStyle.Fill;
 					frm.TopLevel = false;
 					frm.Parent = tab.TabPages[intIndex];
