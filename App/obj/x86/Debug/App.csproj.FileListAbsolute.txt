@@ -57,7 +57,6 @@ C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmPart.r
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmPartEdit.resources
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmUnit.resources
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmUnitEdit.resources
-<<<<<<< .mine
 H:\a.爱眼医院\project\App\obj\x86\Debug\App.Dictionary.FrmCure.resources
 H:\a.爱眼医院\project\App\obj\x86\Debug\App.Dictionary.FrmCureEdit.resources
 H:\a.爱眼医院\project\App\obj\x86\Debug\App.Dictionary.FrmFint.resources
@@ -80,9 +79,6 @@ C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmFintEd
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmPayType.resources
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmPayTypeEdit.resources
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Examine.FrmExamine.resources
-||||||| .r29
-=======
->>>>>>> .r33
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmSample.resources
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmSampleEdit.resources
 C:\Users\CONSOLE\Documents\GitHub\His\App\obj\x86\Debug\App.Dictionary.FrmFixed.resources
@@ -423,3 +419,4 @@ D:\HisForm\App\obj\x86\Debug\App.csproj.GenerateResource.Cache
 D:\HisForm\App\obj\x86\Debug\App.csproj.CoreCompileInputs.cache
 D:\HisForm\App\obj\x86\Debug\App.exe
 D:\HisForm\App\obj\x86\Debug\App.pdb
+D:\HisForm\App\obj\x86\Debug\App.Dictionary.FrmFinanceTypeEdit.resources
