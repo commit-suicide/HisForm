@@ -39,7 +39,7 @@
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.grd = new CCWin.SkinControl.SkinDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skinToolStrip1.SuspendLayout();
@@ -144,6 +144,8 @@
             // 
             // grd
             // 
+            this.grd.AllowUserToAddRows = false;
+            this.grd.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.grd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grd.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -160,7 +162,7 @@
             this.grd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.id,
             this.Column2,
             this.Column4});
             this.grd.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
@@ -179,6 +181,7 @@
             this.grd.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.grd.Location = new System.Drawing.Point(4, 68);
             this.grd.Name = "grd";
+            this.grd.ReadOnly = true;
             this.grd.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.grd.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -187,26 +190,34 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.grd.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.grd.RowTemplate.Height = 23;
+            this.grd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd.Size = new System.Drawing.Size(632, 408);
             this.grd.TabIndex = 8;
             this.grd.TitleBack = null;
             this.grd.TitleBackColorBegin = System.Drawing.Color.White;
             this.grd.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
-            // Column1
+            // id
             // 
-            this.Column1.HeaderText = "编号";
-            this.Column1.Name = "Column1";
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "MEDICARETYPE";
             this.Column2.HeaderText = "名称";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "ispass";
             this.Column4.HeaderText = "是否可用";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // FrmMedicareType
             // 
@@ -218,6 +229,7 @@
             this.Name = "FrmMedicareType";
             this.ShowDrawIcon = false;
             this.Text = "FrmMedicareType";
+            this.Load += new System.EventHandler(this.FrmMedicareType_Load);
             this.skinToolStrip1.ResumeLayout(false);
             this.skinToolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).EndInit();
@@ -234,7 +246,7 @@
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.ToolStripButton btnClose;
         private CCWin.SkinControl.SkinDataGridView grd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }

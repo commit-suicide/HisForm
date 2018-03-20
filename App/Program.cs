@@ -50,6 +50,10 @@ namespace App {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
+            //Application.Run(new FrmAntibiosisLevel());
+            //Application.Run(new FrmAssayTemplate());
+            //Application.Run(new FrmCity());
+            Application.Run(new FrmDrug());
 			//Application.Run(new App.FrmLogin());
 			///Application.Run(new App.FrmMain());
 
@@ -62,7 +66,7 @@ namespace App {
 
 			//Application.Run(new FrmPassword());
 
-			Application.Run(new FrmHospital());
+			//Application.Run(new FrmWorkerType());
 			//Application.Run(new FrmHospitalEdit(3));
 
 			//Application.Run(new FrmDepartment());
