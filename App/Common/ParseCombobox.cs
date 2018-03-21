@@ -767,5 +767,121 @@ namespace App.Common {
 			}
 		}
 		//****************************************************************************************************
+		//包装单位  
+		public static void setPack(ComboBox cmb, Object value = null) {
+			DataTable dt = new ModPack().getSelect();
+			if (dt == null) {
+				dt = new DataTable();
+
+				DataColumn dcText = new DataColumn("id");
+				DataColumn dcValue = new DataColumn("packName");
+
+				dt.Columns.Add(dcText);
+				dt.Columns.Add(dcValue);
+			}
+
+			DataRow dr = dt.NewRow();
+			dr["id"] = 0;
+			dr["packName"] = "--包装单位--";
+			dt.Rows.InsertAt(dr, 0);
+
+			cmb.DataSource = dt;
+			cmb.ValueMember = "id";
+			cmb.DisplayMember = "packName";
+
+			if (value == null) {
+				cmb.SelectedValue = 0;
+			} else {
+				cmb.SelectedValue = Convert.ToInt32(value);
+			}
+		}
+		//****************************************************************************************************
+		//剂型  
+		public static void setConformation(ComboBox cmb, Object value = null) {
+			DataTable dt = new ModConformation().getSelect();
+			if (dt == null) {
+				dt = new DataTable();
+
+				DataColumn dcText = new DataColumn("id");
+				DataColumn dcValue = new DataColumn("conformationName");
+
+				dt.Columns.Add(dcText);
+				dt.Columns.Add(dcValue);
+			}
+
+			DataRow dr = dt.NewRow();
+			dr["id"] = 0;
+			dr["conformationName"] = "--剂型--";
+			dt.Rows.InsertAt(dr, 0);
+
+			cmb.DataSource = dt;
+			cmb.ValueMember = "id";
+			cmb.DisplayMember = "conformationName";
+
+			if (value == null) {
+				cmb.SelectedValue = 0;
+			} else {
+				cmb.SelectedValue = Convert.ToInt32(value);
+			}
+		}
+		//****************************************************************************************************
+		////规格
+		public static void setToxic(ComboBox cmb, Object value = null) {
+			DataTable dt = new ModToxic().getSelect();
+			if (dt == null) {
+				dt = new DataTable();
+
+				DataColumn dcText = new DataColumn("id");
+				DataColumn dcValue = new DataColumn("toxicName");
+
+				dt.Columns.Add(dcText);
+				dt.Columns.Add(dcValue);
+			}
+
+			DataRow dr = dt.NewRow();
+			dr["id"] = 0;
+			dr["toxicName"] = "--规格--";
+			dt.Rows.InsertAt(dr, 0);
+
+			cmb.DataSource = dt;
+			cmb.ValueMember = "id";
+			cmb.DisplayMember = "toxicName";
+
+			if (value == null) {
+				cmb.SelectedValue = 0;
+			} else {
+				cmb.SelectedValue = Convert.ToInt32(value);
+			}
+		}
+		//****************************************************************************************************
+		//部位
+		public static void setParty(ComboBox cmb, Object value = null) {
+			DataTable dt = new ModParty().getSelect();
+			if (dt == null) {
+				dt = new DataTable();
+
+				DataColumn dcText = new DataColumn("id");
+				DataColumn dcValue = new DataColumn("PartyName");
+
+				dt.Columns.Add(dcText);
+				dt.Columns.Add(dcValue);
+			}
+
+			DataRow dr = dt.NewRow();
+			dr["id"] = 0;
+			dr["PartyName"] = "--部位--";
+			dt.Rows.InsertAt(dr, 0);
+
+			cmb.DataSource = dt;
+			cmb.ValueMember = "id";
+			cmb.DisplayMember = "PartyName";
+
+			if (value == null) {
+				cmb.SelectedValue = 0;
+			} else {
+				cmb.SelectedValue = Convert.ToInt32(value);
+			}
+		}
+		//****************************************************************************************************
 	}
 }

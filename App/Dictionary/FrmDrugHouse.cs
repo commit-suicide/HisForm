@@ -55,13 +55,22 @@ namespace App.Dictionary
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            FrmDrugHouse frm = new FrmDrugHouse();
-            frm.ShowDialog();
+            FrmDrugHouseEdit frm = new FrmDrugHouseEdit();
+			if (frm.ShowDialog() == DialogResult.OK) {
+				showData();
+			}
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-    }
+
+		private void btnUpdate_Click(object sender, EventArgs e) {
+			FrmDrugHouseEdit frm = new FrmDrugHouseEdit(Convert.ToInt32(grd.CurrentRow.Cells["id"].Value));
+			if (frm.ShowDialog() == DialogResult.OK) {
+				showData();
+			}
+		}
+	}
 }

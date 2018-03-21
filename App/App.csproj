@@ -715,6 +715,7 @@
     <Compile Include="Model\ModMedicareType.cs" />
     <Compile Include="Model\ModPack.cs" />
     <Compile Include="Model\ModPart.cs" />
+    <Compile Include="Model\ModParty.cs" />
     <Compile Include="Model\ModPayType.cs" />
     <Compile Include="Model\ModRegisterType.cs" />
     <Compile Include="Model\ModRelation.cs" />

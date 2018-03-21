@@ -61,7 +61,16 @@ namespace App.Dictionary
         private void btnInsert_Click(object sender, EventArgs e)
         {
             FrmDrugTypeEdit frm = new FrmDrugTypeEdit();
-            frm.ShowDialog();
-        }
-    }
+			if (frm.ShowDialog() == DialogResult.OK) {
+				showData();
+			}
+		}
+
+		private void btnUpdate_Click(object sender, EventArgs e) {
+			FrmDrugTypeEdit frm = new FrmDrugTypeEdit(Convert.ToInt32(grd.CurrentRow.Cells["id"].Value));
+			if (frm.ShowDialog() == DialogResult.OK) {
+				showData();
+			}
+		}
+	}
 }
